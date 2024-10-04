@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MilyonerYarisma__pratik
 {
@@ -13,7 +9,7 @@ namespace MilyonerYarisma__pratik
             //Bu uygulam 3 sorudan ikisini bilenin kazandığı, 2 doğru veya 2 yanlış yapıldığında 3. soruya gerek olmadan sonuca varan bir yarışmadır.
             //Örnekte 2 şıkla yapılmıştı ben 3 şık yaparak biraz işimi zorlaştırmak istedim.
             //Koddaki string ifadelerin doğallığı ile uğraşırken verimlilik ve kendimi tekrar etme sıklığımın çok olduğunu fark ettim. ChatGPT'den destek alarak daha sade halini elde ettim
-            //Ama öğrenme sürecinde görmediğim kısımları da içerdiği için onun yerine mükemmel olmayan kendi kodumu paylaşmayı tercih ettim.
+            //Ama öğrenme sürecinde görmediğim kısımları da içerdiği için onun yerine verimliliği mükemmel olmayan kendi kodumu paylaşmayı tercih ettim.
             // Kodu incelemenin yanında kendiniz de çalıştırırsanız sevinirim :)
 
             // Başka çözümleri de gördükten sonra daha verimlisi için tekrar uğraşacağım. :)
@@ -35,10 +31,10 @@ namespace MilyonerYarisma__pratik
 
             Console.WriteLine($"Teşekkürler, {name} yarışmamıza tekrar hoş geldin!!!!");
             Console.WriteLine();
-            Console.WriteLine("Kuralları biliyor musun? (evet veya hayır şeklinde cevaplanacak)" );
+            Console.WriteLine("Kuralları biliyor musun? (evet veya hayır şeklinde cevaplanacak)");
             string rulesResult = Console.ReadLine().ToLower();
 
-            if (rulesResult == "evet") 
+            if (rulesResult == "evet")
             {
                 Console.WriteLine();
                 Console.WriteLine("Güzel, yine de senin için tekrr edelim; ");
@@ -50,7 +46,7 @@ namespace MilyonerYarisma__pratik
                 Console.WriteLine();
                 Console.WriteLine("Senin için hatırlatalım.");
                 Console.WriteLine("Yarışmamız toplamda 3 sorudan oluşuyor, ve bu 3 sorudan ikisini doğru bilirsen büyük ödülü kazanıyorsun.");
-                Console.WriteLine("En az ikisini bilemezsen maalesef seni eli boş uğurluyoruz. ");               
+                Console.WriteLine("En az ikisini bilemezsen maalesef seni eli boş uğurluyoruz. ");
             }
 
             int correctCounter = 0;
@@ -58,8 +54,8 @@ namespace MilyonerYarisma__pratik
             Console.WriteLine("Hazır olduğunu var sayarak ilk soruu soruyorum.");
 
             Console.WriteLine("Japonya'nın başkenti neresidir? \nA:) Tokyo \nB:) Kyoto \nC:) Osaka");
-             answer1 = Console.ReadLine().ToLower();
-            if (answer1 == "a") 
+            answer1 = Console.ReadLine().ToLower();
+            if (answer1 == "a")
             {
                 correctCounter++;
                 Console.WriteLine($"Tebrikler ilk sorunun cevabını doğru bildin {name}.");
@@ -73,7 +69,7 @@ namespace MilyonerYarisma__pratik
             Console.WriteLine("Öyleyse gelsin ikinci sorumuz.");
             Console.WriteLine();
             Console.WriteLine("Hangisi bir Türk yemeği değildir? \nA:) İçli Köfte \nB:) Lahmcun \nC:) Lazanya ");
-             answer2 = Console.ReadLine().ToLower();
+            answer2 = Console.ReadLine().ToLower();
             if ((answer2 == "c") && (correctCounter == 1))
             {
                 correctCounter++;
@@ -82,7 +78,7 @@ namespace MilyonerYarisma__pratik
                 Console.WriteLine("**** 1.000.000.000 TL ****");
                 Console.WriteLine("Güzel günlerde kullanmn dileğiyle.");
             }
-            else if ((answer2 == "c") && (correctCounter == 0)) 
+            else if ((answer2 == "c") && (correctCounter == 0))
             {
                 Console.WriteLine();
                 correctCounter++;
@@ -175,7 +171,7 @@ namespace MilyonerYarisma__pratik
                 {
                     Console.WriteLine();
                     Console.WriteLine($"Maalesef bu soruya da yanlış cevap vererek kazanma şansını tamamen kaybettin {name}.");
-                    Console.WriteLine("Üzülerek seni eli boş uğurluyoruz. Umarız bundan sonra hayatta daha başarılı olursun. \n Görüşmek Üzere.");
+                    Console.WriteLine("Üzülerek seni eli boş uğurluyoruz. Umarız bundan sonra hayatta daha başarılı olursun. \nGörüşmek Üzere.");
                 }
 
             }
